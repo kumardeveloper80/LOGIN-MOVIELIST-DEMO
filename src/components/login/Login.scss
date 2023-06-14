@@ -1,0 +1,70 @@
+.background {
+    height: 700px;
+    width: 100%;
+    background-image: url("https://cdn.wallpapersafari.com/73/43/5qEwYQ.jpg");
+}
+.login-heading {
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+.invalid-feedback {
+    color: red;
+    padding-top: 5px;
+}
+
+.register-form {
+    border: 1px solid gray;
+    padding: 30px;
+    margin: auto;
+    background-color: honeydew;
+    width: 50%;
+}
+
+.form-group {
+    padding: 10px
+}
+
+label {
+    padding-right: 5px;
+}
+
+.form-control {
+    width: 250px;
+    height: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group-buttons {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.btn-login {
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-reset {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(92, 117, 54);
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+label {
+    width: 100px;
+    display: inline-block;
+}

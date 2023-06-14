@@ -1,0 +1,56 @@
+.movielist {
+    margin: auto;
+    width: 50%;
+    background-image: url("https://thumbs.dreamstime.com/b/movies-film-blue-light-background-18646612.jpg");
+    padding: 30px 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.listitem {
+    color: rgb(212, 183, 183);
+    list-style-type: square;
+    cursor: pointer;
+}
+
+.listitem:hover {
+    text-align: center;
+    text-decoration: wavy;
+    color: rgb(219, 235, 7);
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    margin: 0 -10px;
+}
+
+nav li {
+    margin: auto;
+    list-style-type: none;
+}
+
+.push-right {
+    margin-left: auto;
+}
+
+.movie-title {
+    color: black;
+    width: 200px;
+    margin-left: 200px;
+}
+
+.btn-logout {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(116, 207, 40);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    align-items: right;
+}

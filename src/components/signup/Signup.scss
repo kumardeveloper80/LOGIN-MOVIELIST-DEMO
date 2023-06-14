@@ -1,0 +1,92 @@
+.background-signup {
+    height: 700px;
+    width: 100%;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/007/164/537/original/fingerprint-identity-sensor-data-protection-system-podium-hologram-blue-light-and-concept-free-vector.jpg");
+}
+
+.signup-heading {
+    text-align: center;
+    color: white;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+.invalid-feedback {
+    color: red;
+    padding-top: 5px;
+}
+
+.register-form {
+    border: 1px solid gray;
+    padding: 30px;
+    margin: auto;
+    background-color: honeydew;
+    width: 50%;
+}
+
+.form-group {
+    padding: 10px
+}
+
+label {
+    padding-right: 5px;
+}
+
+.form-control {
+    width: 250px;
+    height: 20px;
+}
+
+.form-group-buttons {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.btn-signup {
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-login {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(24, 116, 77);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-reset {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(92, 117, 54);
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+label {
+    width: 100px;
+    display: inline-block;
+}
+
+.login-redirect {
+    background-color: beige;
+    margin: auto;
+    width: 26%;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.login-text {
+    color: black;
+    display: inline-block;
+    margin-left: 10px;
+}

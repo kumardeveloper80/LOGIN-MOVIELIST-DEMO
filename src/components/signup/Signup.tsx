@@ -8,6 +8,7 @@ import * as Yup from "yup";
 import "./Signup.scss";
 import { useAppDispatch } from "../../redux/store";
 import signupAction from "../../redux/actions/signup.action";
+import formBg from '../../assets/images/formBg.jpg'
 
 type UserSubmitForm = {
   email: string;
@@ -54,54 +55,65 @@ const Signup = () => {
   };
 
   return (
-    <div className="background-signup">
-      <h2 className="signup-heading">Register</h2>
-      <div className="register-form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-group">
-            <label>Email</label>
-            <input
-              type="text"
-              {...register("email")}
-              className={`form-control ${errors.email ? "is-invalid" : ""}`}
-            />
-            <div className="invalid-feedback">{errors.email?.message}</div>
-          </div>
-
-          <div className="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              {...register("password")}
-              className={`form-control ${errors.password ? "is-invalid" : ""}`}
-            />
-            <div className="invalid-feedback">{errors.password?.message}</div>
-          </div>
-          <div className="form-group">
-            <label>Movies</label>
-            <input
-              type="movies"
-              {...register("movies")}
-              className={`form-control ${errors.movies ? "is-invalid" : ""}`}
-            />
-            <div className="invalid-feedback">{errors.movies?.message}</div>
-          </div>
-
-          <div className="form-group-buttons">
-            <button type="button" onClick={() => reset()} className="btn-reset">
-              Reset
-            </button>
-            <button type="submit" className="btn-signup">
-              Register
-            </button>
-          </div>
-        </form>
-      </div>
-      <div className="login-redirect">
-        <h3 className="login-text">Already registered ? </h3>
-        <button className="btn-login" onClick={() => history.push("/Login")}>
-          Login
-        </button>
+    <div
+      className="formTemplate"
+      style={{
+        backgroundImage: `url('${formBg}')`,
+      }}
+    >
+      <div className="formCard">
+        <h2 className="formCard__title">Register</h2>
+        <div className="formCard__form">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-group">
+              <label>Email</label>
+              <input
+                type="text"
+                {...register("email")}
+                className={`form-control ${errors.email ? "is-invalid" : ""}`}
+              />
+              <div className="invalid-feedback">{errors.email?.message}</div>
+            </div>
+            <div className="form-group">
+              <label>Password</label>
+              <input
+                type="password"
+                {...register("password")}
+                className={`form-control ${
+                  errors.password ? "is-invalid" : ""
+                }`}
+              />
+              <div className="invalid-feedback">{errors.password?.message}</div>
+            </div>
+            <div className="form-group">
+              <label>Movies</label>
+              <input
+                type="movies"
+                {...register("movies")}
+                className={`form-control ${errors.movies ? "is-invalid" : ""}`}
+              />
+              <div className="invalid-feedback">{errors.movies?.message}</div>
+            </div>
+            <div className="formCard__form-button">
+              <button
+                type="button"
+                onClick={() => reset()}
+                className="button button--border"
+              >
+                Reset
+              </button>
+              <button type="submit" className="button">
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+        <div className="formCard__footer">
+          <p className="formCard__footer-text">
+            Already registered ?{" "}
+            <span onClick={() => history.push("/Login")}> Login</span>{" "}
+          </p>
+        </div>
       </div>
     </div>
   );

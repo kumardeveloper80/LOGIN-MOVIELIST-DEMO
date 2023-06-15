@@ -2,6 +2,8 @@ import Movielist from "./Movielist";
 import { useAppDispatch } from "../../redux/store";
 import authAction from "../../redux/actions/login.action";
 import { useHistory } from "react-router-dom";
+import logo from "../../assets/images/movieLogo.png";
+import { Container } from "@mui/material";
 
 const Movies = () => {
   const dispatch = useAppDispatch();
@@ -23,22 +25,26 @@ const Movies = () => {
   ];
 
   return (
-    <div>
-      <nav className="movie-header">
-        <ul>
-          <li>
-            <h1 className="movie-title">List of movies</h1>
-          </li>
-          <li className="push-right">
-            <button className="btn-logout" onClick={() => handleLogout()}>
+    <>
+      <nav className="siteHeader">
+        <Container maxWidth="lg">
+          <div className="siteHeader__inner">
+            <div className="siteHeader__logo">
+              <img src={logo} alt="logo" className="img-fluid" />
+            </div>
+            <button className="button" onClick={() => handleLogout()}>
               Logout
             </button>
-          </li>
-        </ul>
+          </div>
+        </Container>
       </nav>
-
-      <Movielist movies={moviedata} />
-    </div>
+      <div className="pageTemplate">
+        <Container maxWidth="lg">
+          <h1 className="pageTemplate__title">All Movie List</h1>
+          <Movielist movies={moviedata} />
+        </Container>
+      </div>
+    </>
   );
 };
 

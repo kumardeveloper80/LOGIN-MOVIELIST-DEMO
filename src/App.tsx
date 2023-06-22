@@ -1,8 +1,8 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import Login from "./components/login/Login";
-import Movies from "./components/movies/Movies";
-import Signup from "./components/signup/Signup";
+import Login from "./pages/login/Login";
+import Movies from "./pages/movies/Movies";
+import Signup from "./pages/signup/Signup";
 import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (

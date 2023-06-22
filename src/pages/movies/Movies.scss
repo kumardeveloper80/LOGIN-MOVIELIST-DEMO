@@ -1,0 +1,133 @@
+.siteHeader {
+    padding: 12px 0;
+    border-bottom: 3px solid #6447a4;
+    height: 85px;
+    box-sizing: border-box;
+    background: #ecebfb;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        img {
+            height: 55px;
+        }
+    }
+}
+
+.notFoundBlock {
+    padding: 55px 15px;
+    border: 1px solid #eae1fb;
+    border-radius: 10px;
+    text-align: center;
+
+    &__text {
+        font-size: 18px;
+        color: #2d1671;
+    }
+}
+
+.pageTemplate {
+    min-height: calc(100vh - 85px);
+    padding: 50px 0;
+
+    &__title {
+        font-size: 32px;
+        margin: 0 0 35px;
+        color: #000;
+        position: relative;
+
+        &:after {
+            content: "";
+            background: linear-gradient(90deg, rgb(117, 74, 153) 0%, rgb(30, 182, 192) 100%);
+            height: 3px;
+            width: 160px;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+    }
+}
+
+.movieCard {
+    border: 1px solid #eae1fb;
+    padding: 4px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+
+    &:after {
+        content: "";
+        background: linear-gradient(90deg, rgb(117, 74, 153) 0%, rgb(30, 182, 192) 100%);
+        height: 5px;
+        width: 0;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all 0.5s ease;
+    }
+
+    &__img {
+        height: 200px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        padding: 15px;
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            color: #8a8ca5;
+            opacity: 80%;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin: 10px 0 0;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 18px;
+        color: #2d1671;
+    }
+
+    &__size {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 15px;
+        padding-top: 10px;
+        border-top: 1px solid #eae1fb;
+        font-size: 14px;
+        color: #2d1671;
+        font-weight: 500;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.2);
+
+        &::after {
+            width: 100%;
+        }
+    }
+}
